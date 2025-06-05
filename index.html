@@ -448,11 +448,14 @@
   </section>
   <script>
 
-    window.addEventListener("resize", () => {
-      if(window.innerWidth <= 450){
+    function redirectIfMobile() {
+      if (window.innerWidth >= 450) {
         window.location.href = "https://shobhitmaste.github.io/Shobhit-Singh-Portfolio/";
-      }    
-    }, true);
+      }
+    }
+
+    window.addEventListener("resize", redirectIfMobile, false);
+    window.addEventListener("load", redirectIfMobile); 
 
   </script>
 </body>
